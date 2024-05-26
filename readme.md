@@ -1,0 +1,1 @@
+scrapy crawl ourcommons -o contacts.csv -t csv -s JOBDIR=crawl/spider1
