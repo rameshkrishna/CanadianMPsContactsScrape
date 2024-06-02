@@ -18,8 +18,8 @@ To get started with this project, you'll need to have Python installed on your m
 1. **Clone the repository:**
 
    ```sh
-   git clone https://github.com/your-username/canadian-mp-contact-scraper.git
-   cd canadian-mp-contact-scraper
+   git clone https://github.com/rameshkrishna/CanadianMPsContactsScrape.git
+   cd CanadianMPsContactsScrape
    ```
 
 2. **Create a virtual environment:**
@@ -104,6 +104,3 @@ Contributions are welcome! Please fork the repository and create a pull request 
 4. Push to the branch (`git push origin feature-branch`).
 5. Create a new Pull Request.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
