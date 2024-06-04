@@ -57,7 +57,7 @@ This command will start the Scrapy spider named `ourcommons` and save the scrape
 ## Project Structure
 
 ```
-canadian-mp-contact-scraper/
+CanadianMPsContactsScrape/
 │
 ├── scrapy.cfg
 ├── venv/
