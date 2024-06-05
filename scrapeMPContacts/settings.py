@@ -7,17 +7,17 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = "scrapeMPContacts"
+BOT_NAME = "OpenAIBot"
 
 SPIDER_MODULES = ["scrapeMPContacts.spiders"]
 NEWSPIDER_MODULE = "scrapeMPContacts.spiders"
 
-
+USER_AGENT = "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36"
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "scrapeMPContacts (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32

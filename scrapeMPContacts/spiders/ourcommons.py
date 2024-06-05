@@ -2,6 +2,7 @@ import scrapy
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import Rule, CrawlSpider
 
+
 class OurcommonsSpider(scrapy.Spider):
     """
     A Scrapy spider to crawl and extract information about members from the OurCommons website.
@@ -15,7 +16,7 @@ class OurcommonsSpider(scrapy.Spider):
     name = "ourcommons"
     allowed_domains = ["ourcommons.ca"]
     start_urls = ["https://www.ourcommons.ca/members/en/search"]
-    
+
     rules = [
         Rule(
             LinkExtractor(
@@ -31,7 +32,7 @@ class OurcommonsSpider(scrapy.Spider):
     def parse(self, response):
         """
         The default callback used by Scrapy to process downloaded responses.
-        
+
         This method is called when the spider has downloaded a page.
         It extracts links to individual member pages and follows them.
 
@@ -39,7 +40,8 @@ class OurcommonsSpider(scrapy.Spider):
             response (scrapy.http.Response): The response object containing the downloaded page content.
         """
         # Extract links to individual member pages
-        author_page_links = response.css("a.ce-mip-mp-tile::attr(href)").getall()
+        author_page_links = response.css(
+            "a.ce-mip-mp-tile::attr(href)").getall()
         yield from response.follow_all(author_page_links, self.parse_author)
 
     def parse_author(self, response):

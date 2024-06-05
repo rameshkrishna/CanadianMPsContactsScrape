@@ -2,6 +2,7 @@ import scrapy
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import Rule, CrawlSpider
 
+
 class QuebecSpider(CrawlSpider):
     """
     A Scrapy spider to crawl and extract information about members from the Quebec National Assembly website.
@@ -41,7 +42,8 @@ class QuebecSpider(CrawlSpider):
             response (scrapy.http.Response): The response object containing the downloaded page content.
         """
         # Extract links from the table with ID `ListeDeputes`
-        mpp_index_links = response.css("#ListeDeputes a:not(.nePasRediriger)::attr(href)").getall()
+        mpp_index_links = response.css(
+            "#ListeDeputes a:not(.nePasRediriger)::attr(href)").getall()
         for link in mpp_index_links:
             if '/en/deputes/' in link:
                 link = link.replace('index.html', 'coordonnees.html')

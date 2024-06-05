@@ -50,6 +50,11 @@ To run the scraper and save the contact details to a CSV file, use the following
 
 ```sh
 scrapy crawl ourcommons -o contacts.csv -t csv -s JOBDIR=crawl/spider1
+
+scrapy crawl Quebec -o Qcontacts5.csv -t csv -s JOBDIR=crawl/Q5
+
+scrapy crawl Ontario -o Ontario.csv -t csv -s JOBDIR=crawl/Ontari06
+
 ```
 
 This command will start the Scrapy spider named `ourcommons` and save the scraped data to `contacts.csv`.
@@ -103,4 +108,3 @@ Contributions are welcome! Please fork the repository and create a pull request 
 3. Commit your changes (`git commit -am 'Add new feature'`).
 4. Push to the branch (`git push origin feature-branch`).
 5. Create a new Pull Request.
-
